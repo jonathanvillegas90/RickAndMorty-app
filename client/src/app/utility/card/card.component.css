@@ -1,9 +1,29 @@
-.example-card {
-    max-width: 400px;
+@media (min-width:600px) {
+  .container{
+    margin: 5px 20px 5px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  .card {
+    width: 300px;
+    border-radius: 25px;
+    margin: 5px;
+  }
+}
+@media (max-width:599px) {
+  .container{
+    margin: 5px 5px 10px 10px;
+    display: grid;
+    justify-content: center;
+  }
+  .card {
+    max-width: 300px;
+    border-radius: 25px;
+    margin: 5px;
+  }
+}
+
   
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+ 
  
