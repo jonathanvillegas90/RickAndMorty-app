@@ -26,7 +26,12 @@ server.use((_: Request, res: Response, next: NextFunction) => {
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
 });
-server.use("/", [Routes.status, Routes.character, Routes.episodes]);
+server.use("/", [
+  Routes.status,
+  Routes.character,
+  Routes.episodes,
+  Routes.locations,
+]);
 
 // manejo de errores con funcion NEXT
 server.use(
