@@ -6,7 +6,7 @@ export default class CharacterController {
     const { currentPage } = req.body;
     if (!currentPage) {
       try {
-        const characters = await axios(
+        let characters = await axios(
           "https://rickandmortyapi.com/api/character"
         );
         res.send(characters.data.results);

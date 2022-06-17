@@ -2,6 +2,14 @@ import { Request, Response } from "express";
 import axios from "axios";
 
 export default class EpisodeController {
+  static async getAllEpisodes(_req: Request, res: Response) {
+    try {
+      const episodes = await axios("https://rickandmortyapi.com/api/episode");
+      res.send(episodes.data.results);
+    } catch (error) {
+      res.send(error);
+    }
+  }
   static async getEpisodes(req: Request, res: Response) {
     const { currentPage } = req.params;
     if (!currentPage) {

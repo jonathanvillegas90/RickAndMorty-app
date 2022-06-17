@@ -1,20 +1,34 @@
 <div class="container">
-  <mat-card
-    *ngFor="let personajes of characters; index as i; first as isFirst"
-    class="card"
-  >
-    <mat-card-header>
-      <mat-card-title>{{ personajes.name }}</mat-card-title>
-      <mat-card-subtitle>{{ personajes.type }}</mat-card-subtitle>
-    </mat-card-header>
-    <img
-      mat-card-lg-image
-      src="{{ personajes.img }}"
-      alt="{{ personajes.name }}"
-    />
+  <mat-card *ngFor="let personajes of characters" class="card">
+    <a href="{{ personajes.url }}">
+      <mat-card-header>
+        <mat-card-title>{{ personajes.name }}</mat-card-title>
+        <mat-card-subtitle>{{ personajes.type }}</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-lg-image
+        src="{{ personajes.image }}"
+        alt="{{ personajes.name }}"
+      />
+    </a>
     <mat-card-content>
       <p>
         {{ personajes.text }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="container">
+  <mat-card *ngFor="let episodios of episodes" class="card">
+    <a href="{{ episodios.url }}">
+      <mat-card-header>
+        <mat-card-title>{{ episodios.name }}</mat-card-title>
+        <mat-card-subtitle>{{ episodios.air_date }}</mat-card-subtitle>
+      </mat-card-header>
+    </a>
+    <mat-card-content>
+      <p>
+        {{ episodios.episode }}
       </p>
     </mat-card-content>
   </mat-card>
