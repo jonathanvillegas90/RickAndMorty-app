@@ -11,6 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import { CharactersComponent } from './page/characters/characters.component';
+import { LocationsComponent } from './page/locations/locations.component';
+import { EpisodesComponent } from './page/episodes/episodes.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     BagComponent,
     HeaderComponent,
     FooterComponent,
+    CharactersComponent,
+    LocationsComponent,
+    EpisodesComponent,
   ],
   imports: [
     BrowserModule,
