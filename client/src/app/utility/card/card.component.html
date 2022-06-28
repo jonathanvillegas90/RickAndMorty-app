@@ -5,11 +5,7 @@
         <mat-card-title>{{ personajes.name }}</mat-card-title>
         <mat-card-subtitle>{{ personajes.type }}</mat-card-subtitle>
       </mat-card-header>
-      <img
-        mat-card-lg-image
-        src="{{ personajes.image }}"
-        alt="{{ personajes.name }}"
-      />
+      <img mat-card-lg-image [src]="personajes.image" [alt]="personajes.name" />
     </a>
     <mat-card-content>
       <p>

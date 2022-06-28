@@ -14,6 +14,10 @@ import { CharactersComponent } from './page/characters/characters.component';
 import { LocationsComponent } from './page/locations/locations.component';
 import { EpisodesComponent } from './page/episodes/episodes.component';
 import { HomeComponent } from './page/home/home.component';
+import { FiltrosPipe } from './utility/pipes/filtros.pipe';
+import { FiltroCharactersPipe } from './utility/pipes/filtro-characters.pipe';
+import { FiltroEpisodesPipe } from './utility/pipes/filtro-episodes.pipe';
+import { FiltroLocationsPipe } from './utility/pipes/filtro-locations.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { HomeComponent } from './page/home/home.component';
     LocationsComponent,
     EpisodesComponent,
     HomeComponent,
+    FiltrosPipe,
+    FiltroCharactersPipe,
+    FiltroEpisodesPipe,
+    FiltroLocationsPipe,
   ],
   imports: [
     BrowserModule,

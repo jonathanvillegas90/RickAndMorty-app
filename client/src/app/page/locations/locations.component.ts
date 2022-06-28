@@ -7,12 +7,18 @@ import { LocationsService } from 'src/app/services/locations.service';
 })
 export class LocationsComponent implements OnInit {
   public locations: any = [];
+  public currentPage: number = 2;
   constructor(private locationsService: LocationsService) {}
 
   ngOnInit(): void {
     this.locationsService.getLocations().subscribe((resp) => {
       this.locations = resp;
-      console.log(this.locations);
+    });
+  }
+
+  getNextLocations(num: number) {
+    this.locationsService.getNextLocations(num).subscribe((resp) => {
+      this.locations = resp;
     });
   }
 }
